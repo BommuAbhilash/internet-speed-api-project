@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet speed meter</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./node_modules/fast-speedtest-api/src/Api.js"></script>
+    <script src="./script.js"></script>
+    <!-- <script>
+
+        fetch("https://api.fast.com/netflix/speedtest/v2?https=true&token=YXNkZmFzZGxmbnNkYWZoYXNkZmhrYWxm&urlCount=5").then((data) => {
+            //console.log(data)
+            return data.json();
+        }).then((actualData) => {
+             console.log(actualData)
+            const data = actualData.data
+            document.getElementById("mySpeed").innerHTML=`${data} mbps`
+
+        }).catch((error)=>{
+            console.log(` ${error}`)
+        })
+        
+    </script> -->
+<script defer src="main.bundle.js"></script></head>
+<body>
+    
+    <section>
+        <h1>Internet Speed Finder</h1>
+        
+        <div class="loader">
+            <div class="dot" style="--i:0;"></div>
+            <div class="dot" style="--i:1;"></div>
+            <div class="dot" style="--i:2;"></div>
+            <div class="dot" style="--i:3;"></div>
+            <div class="dot" style="--i:4;"></div>
+            <div class="dot" style="--i:5;"></div>
+            <div class="dot" style="--i:6;"></div>
+            <div class="dot" style="--i:7;"></div>
+            <div class="dot" style="--i:8;"></div>
+            <div class="dot" style="--i:9;"></div>
+        </div>
+        
+        <h2 id="mySpeed" style="color:white ;">calculating...</h1>
+            <div class="loader">
+                <div class="dot" style="--i:0;"></div>
+                <div class="dot" style="--i:1;"></div>
+                <div class="dot" style="--i:2;"></div>
+                <div class="dot" style="--i:3;"></div>
+                <div class="dot" style="--i:4;"></div>
+                <div class="dot" style="--i:5;"></div>
+                <div class="dot" style="--i:6;"></div>
+                <div class="dot" style="--i:7;"></div>
+                <div class="dot" style="--i:8;"></div>
+                <div class="dot" style="--i:9;"></div>
+            </div>
+
+            <button id="btn" onClick="window.location.reload();"><span>retest</span></button>
+           
+    </section>
+       
+        
+    
+    
+</body>
+</html>
